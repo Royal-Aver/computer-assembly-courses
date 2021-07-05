@@ -1,5 +1,57 @@
-.logo__img {
-	width: 60px;
-	height: 63px;
+.header {
+	position: fixed;
+	left: 0;
+	right: 0;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 110px;
+		background-color: #000;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		margin-right: 55px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		transition: color 0.5s;
+
+		&:hover {
+			color: #c89afc;
+		}
+	}
+}
+
+.logo {
+	width: 40px;
+	height: 40px;
 	object-fit: cover;
+}
+
+.burger {
+	display: none;
+	background-color: transparent;
+	border: none;
+	margin-left: auto;
+	position: relative;
+	z-index: 2;
+	padding: 0 10px;
+}
+
+.burger span {
+	display: block;
+	width: 45px;
+	height: 5px;
+	background-color: #fff;
+	margin: 8px 0;
 }

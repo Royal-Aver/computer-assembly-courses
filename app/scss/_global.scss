@@ -1,7 +1,24 @@
+body {
+	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 160%;
+	color: #fff;
+}
+
 .container {
-	max-width: 1200px;
+	max-width: 1326px;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.btn {
+	padding: 10px 30px;
+	background: linear-gradient(94.26deg, #c89afc 9.51%, #7c6afa 90.23%);
+	border-radius: 50px;
+	line-height: 150%;
+	border: none;
+	color: inherit;
 }
 
 .sr-only {
