@@ -13,12 +13,36 @@ body {
 }
 
 .btn {
+	position: relative;
+	background: linear-gradient(94.78deg, #df5950 11.19%, #451046 93.72%);
 	padding: 10px 30px;
-	background: linear-gradient(94.26deg, #c89afc 9.51%, #7c6afa 90.23%);
 	border-radius: 50px;
 	line-height: 150%;
 	border: none;
 	color: inherit;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 50px;
+		width: 100%;
+		height: 100%;
+		color: inherit;
+		background: linear-gradient(94.26deg, #c89afc 9.51%, #7c6afa 90.23%);
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+
+	&--hover {
+		position: relative;
+		z-index: 1;
+	}
+
+	&:hover:after {
+		opacity: 1;
+	}
 }
 
 .sr-only {

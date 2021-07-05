@@ -58,7 +58,8 @@
 				</nav>
 
 				<button class="btn header__btn" type="button">
-					Зайти в кабинет
+
+					<span class="btn--hover">Зайти в кабинет</span>
 				</button>
 
 				<button class="burger" type="button">
@@ -72,10 +73,87 @@
 	</header>
 
 	<main>
-		<section class="top">
+		<section class="top" style="background-image: url(images/top/top-bg.jpg);">
 			<div class="container">
+				<div class="top__content">
+					<h1 class="top__title">
+						Первый курс <br> по компьютерной сборке
+					</h1>
 
+					<div class="top__clock clock" data-time="2021-07-22">
+						<div class="clock__item">
+							<span class="clock-num clock__days"></span>
+							<div class="clock__text">Дней</div>
+						</div>
+						<div class="clock__item">
+							<span class="clock-num clock__hours"></span>
+							<div class="clock__text">Часов</div>
+						</div>
+						<div class="clock__item">
+							<span class="clock-num clock__minutes"></span>
+							<div class="clock__text">Минут</div>
+						</div>
+						<div class="clock__item">
+							<span class="clock-num clock__seconds"></span>
+							<div class="clock__text">Секунд</div>
+						</div>
+					</div>
+				</div>
 			</div>
+
+			<div class="top__statistics statistics">
+				<div class="container">
+					<div class="statistics__inner">
+						<button class="statistics__btn btn">
+							<span class="btn--hover">Заказать курс</span>
+						</button>
+
+						<div class="statistics__students-num">
+							<div class="statistics__item">
+								<span class="statistics__text">
+									Учеников всего:
+								</span>
+								<span class="statistics__num">
+									200
+								</span>
+							</div>
+
+							<div class="statistics__students-num">
+								<div class="statistics__item">
+									<span class="statistics__text">
+										Успешно закончили курс:
+									</span>
+									<span class="statistics__num">
+										190
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="statistics__progress">
+							<div class="statistics__item">
+								<span class="statistics__text">
+									Заработано учениками:
+								</span>
+								<span class="statistics__num">
+									400 000 руб.
+								</span>
+							</div>
+
+							<div class="statistics__progress-bar">
+							</div>
+
+							<div class="statistics__sum">
+								<span class="statistics__number">
+									0
+								</span>
+								<span class="statistics__number">
+									1 000 000 руб.
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
 		</section>
 	</main>
 
