@@ -18,13 +18,26 @@
 			content: "";
 			position: absolute;
 			z-index: 1;
-			left: -40px;
 			bottom: 35px;
 			width: 525px;
 			height: 500px;
 			border: 30px solid transparent;
 			border-image: linear-gradient(94.26deg, #c89afc 9.51%, #7c6afa 90.23%);
 			border-image-slice: 1;
+
+			@include r($xl) {
+				display: none;
+			}
+		}
+
+		@include r($xl) {
+			margin-right: 40px;
+		}
+
+		@include r($lg) {
+			position: absolute;
+			z-index: 1;
+			opacity: 0.4;
 		}
 	}
 
@@ -37,6 +50,12 @@
 	&__content {
 		flex: 0 1 640px;
 		width: 100%;
+
+		@include r($lg) {
+			position: relative;
+			flex: 1 1 640px;
+			z-index: 2;
+		}
 	}
 
 	&__title {

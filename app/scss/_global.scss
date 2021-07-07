@@ -16,6 +16,10 @@ body {
 	font-weight: 700;
 	font-size: 48px;
 	line-height: 140%;
+
+	@include r($sm) {
+		font-size: 44px;
+	}
 }
 
 .btn {
