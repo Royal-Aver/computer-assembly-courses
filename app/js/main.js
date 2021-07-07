@@ -46,5 +46,38 @@ $(function () {
 	const deadline = $('.clock').attr('data-time');
 	initializeClock('clock', deadline);
 
+
+
+	$('.burger, .menu a').on('click', function () {
+		$('.header__list').toggleClass('header__list--active')
+	});
+
+	// $(".menu a, .logo").on("click", function (event) {
+	// 	event.preventDefault();
+	// 	var id = $(this).attr('href'),
+	// 		top = $(id).offset().top;
+	// 	$('body,html').animate({ scrollTop: top }, 1500);
+	// });
+
+	$(window).on("scroll", function () {
+		var wn = $(window).scrollTop();
+		if (wn > 120) {
+			$(".header").css("background-color", "#000");
+			$(".header__inner").css("height", "70px");
+		}
+		else {
+			$(".header").css("background-color", "transparent");
+			$(".header__inner").css("height", "110px");
+		}
+	});
+
+	// $(window).on("scroll", function () {
+	// 	if ($(window).scrollTop() > 50) {
+	// 		$('.header__nav').addClass('header__nav--scroll')
+	// 	}
+	// 	else
+	// 		$('.header__nav').removeClass('header__nav--scroll')
+	// });
+
 });
 

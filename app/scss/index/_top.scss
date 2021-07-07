@@ -1,5 +1,4 @@
 .top {
-	height: 100vh;
 	background-size: cover;
 	background-position: center top;
 
@@ -7,8 +6,8 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: calc(100vh - 110px);
-		width: 790px;
+		height: 100vh;
+		max-width: 790px;
 		margin: auto 0;
 	}
 
@@ -17,12 +16,25 @@
 		font-weight: 700;
 		font-size: 64px;
 		line-height: 90 / 64 * 100%;
+
+		@include r($xl) {
+			font-size: 44px;
+		}
+
+		@include r($sm) {
+			margin: auto 0;
+			font-size: 32px;
+		}
 	}
 }
 
 .clock {
 	display: flex;
 	margin-bottom: auto;
+
+	@include r($sm) {
+		display: none;
+	}
 
 	&__item {
 		margin-right: 30px;
@@ -57,12 +69,28 @@
 	&__inner {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
-		height: 130px;
+		align-items: start;
+		padding: 40px 0;
+
+		@include r($xl) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__students-num {
+		@include r($xl) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__item {
 		display: flex;
+
+		&--mobile {
+			@include r($sm) {
+				display: block;
+			}
+		}
 	}
 
 	&__text {
@@ -81,6 +109,10 @@
 	&__progress {
 		max-width: 715px;
 		width: 100%;
+
+		@include r($xl) {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__progress-bar {
@@ -97,7 +129,7 @@
 			left: 0;
 			top: 0;
 			border-radius: inherit;
-			width: 715px * 0.4;
+			width: 40%;
 			height: 6px;
 			background: linear-gradient(94.78deg, #df5950 11.19%, #451046 93.72%);
 		}
