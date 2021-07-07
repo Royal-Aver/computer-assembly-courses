@@ -1,0 +1,45 @@
+.activity {
+	padding: 200px 0;
+	background-color: #000;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__img-inner {
+		position: relative;
+		flex: 0 0 446px;
+		margin-right: 140px;
+		height: 446px;
+		object-fit: contain;
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			left: -40px;
+			bottom: 35px;
+			width: 525px;
+			height: 500px;
+			border: 30px solid transparent;
+			border-image: linear-gradient(94.26deg, #c89afc 9.51%, #7c6afa 90.23%);
+			border-image-slice: 1;
+		}
+	}
+
+	&__img {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+	}
+
+	&__content {
+		flex: 0 1 640px;
+		width: 100%;
+	}
+
+	&__title {
+		margin-bottom: 45px;
+	}
+}
