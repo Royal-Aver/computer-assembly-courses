@@ -1,6 +1,5 @@
 .activity {
-	padding: 200px 0;
-	background-color: #000;
+	padding: 200px 0 100px;
 
 	&__inner {
 		display: flex;
@@ -60,5 +59,13 @@
 
 	&__title {
 		margin-bottom: 45px;
+
+		&::before {
+			display: none;
+		}
+
+		@include r($sm) {
+			font-size: 44px;
+		}
 	}
 }
